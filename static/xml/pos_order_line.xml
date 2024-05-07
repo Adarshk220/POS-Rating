@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<templates xml:space="preserve">
+    <t t-name="pos.order_line"
+       t-inherit="point_of_sale.Orderline"
+       t-inherit-mode="extension">
+             <xpath expr="//div[hasclass('product-name')]" position="before">
+                 <span class="badge rounded-pill" t-if="line.product_rating">
+                     <t t-out="line.product_rating"/>
+                     <t t-out="'/5'"/>
+                     <i class="fa fa-fw fa-star" aria-label="Rating"
+                        role="img" title="Rating"/>
+                 </span>
+             </xpath>
+    </t>
+</templates>
