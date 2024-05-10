@@ -8,7 +8,6 @@ patch(ProductCard.prototype, {
 
     setup() {
         this.pos = usePos();
-        console.log(this.pos,'hello')
          const props = {
             ...super.props,
             product_rating: { type: String, optional: true }
